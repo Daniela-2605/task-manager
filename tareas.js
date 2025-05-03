@@ -1,9 +1,5 @@
-function createTask(taskList, taskDescription) {
-    const newTask = {
-        id: generateUniqueId(), 
-        description: taskDescription,
-        completed: false
-    };
-    taskList.push(newTask); 
-    return newTask; 
+function listAllTasks(taskList) {
+    for (const task of taskList) {
+        console.log(`${task.id} - ${task.description} - Completed: ${task.completed}`);
+    }
 }
