@@ -1,5 +1,9 @@
-function listAllTasks(taskList) {
+function markTaskAsCompleted(taskList, taskId) {
     for (const task of taskList) {
-        console.log(`${task.id} - ${task.description} - Completed: ${task.completed}`);
+        if (task.id === taskId) {
+            task.completed = true;
+            return task; 
+        }
     }
+    return "Task not found"
 }
